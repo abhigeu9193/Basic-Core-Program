@@ -1,31 +1,40 @@
 ﻿// See https://aka.ms/new-console-template for more information
 //Console.WriteLine("Hello, World!");
-// C# code to find highest power
-// of 2 smaller than or equal to n.
 using System;
-
-class Power
-{
-	public static int Powerof2(int n)
+	public class PrimeFactor
 	{
-		int res = 0;
-		for (int i = n; i >= 1; i--)
+
+		// A function to print all prime no.
+		public static void primeFactors(int n)
 		{
-			// If i is a power of 2
-			if ((i & (i - 1)) == 0)
+			// Print the number of 2s that divide n
+			while (n % 2 == 0)
 			{
-				res = i;
-				break;
+				Console.Write(2 + " ");
+				n /= 2;
 			}
+
+			// n must be odd at this point So we can skip one element (Note i = i +2)
+			for (int i = 3; i <= Math.Sqrt(n); i += 2)
+			{
+				// While i divides n, print i and divide n
+				while (n % i == 0)
+				{
+					Console.Write(i + " ");
+					n /= i;
+				}
+			}
+
+			// This condition is to handle the case when n is a prime number greater than 2
+			if (n > 2)
+				Console.Write(n);
 		}
-		return res;
-	}
 
-	// Driver Code
-	static public void Main()
-	{
-		int n = 8;
-		Console.WriteLine(Powerof2(n));
-	}
-}
+		// Driver Code
+		public static void Main()
+		{
+			int n = 8;
+			primeFactors(n);
+		}
 
+	}
