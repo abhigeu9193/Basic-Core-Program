@@ -27,11 +27,9 @@ class LeapYear
 	public static void Main()
 	{
 		int year = 2020;
-		Console.Write(checkYear(year) ? "Leap Year" :
-								"Not a Leap Year");
+		Console.Write(checkYear(year) ? "Leap Year" : "Not a Leap Year");
 	}
 
 }
 
-// This code is contributed by Sam007
 
