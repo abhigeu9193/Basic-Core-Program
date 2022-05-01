@@ -1,16 +1,41 @@
 ﻿// See https://aka.ms/new-console-template for more information
 //Console.WriteLine("Hello, World!");
+/**********************************************
+            alphabetacoder.com
+C# program to check if a number is even or odd 
+***********************************************/
 
 using System;
-public class SwapExample
+
+namespace EvenOdd
 {
-    public static void Main(string[] args)
+    class Program
     {
-        int a = 20, b = 30;
-        Console.WriteLine("Before swap a= " + a + " b= " + b);
-        a = a + b;      
-        b = a - b;     
-        a = a - b;   
-        Console.Write("After swap a= " + a + " b= " + b);
+        static void Main(string[] args)
+        {
+            // declare variable
+            int n;
+
+            //take input
+            Console.Write("Enter the number = ");
+            n = Convert.ToInt32(Console.ReadLine());
+
+            //check if n is even or odd
+            if (n % 2 == 0)
+                Console.WriteLine(n + " is even");
+            else
+                Console.WriteLine(n + " is odd");
+
+           
+            Console.ReadKey();
+        }
     }
 }
+
+
+
+
+
+
+
+
