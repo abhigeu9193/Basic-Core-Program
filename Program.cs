@@ -1,41 +1,46 @@
 ﻿// See https://aka.ms/new-console-template for more information
 //Console.WriteLine("Hello, World!");
-/**********************************************
-            alphabetacoder.com
-C# program to check if a number is even or odd 
-***********************************************/
 
-using System;
-
-namespace EvenOdd
+class constvowels
 {
-    class Program
+    static void Main(string[] args)
     {
-        static void Main(string[] args)
+        char ch;
+        Console.WriteLine("");
+        Console.Write("check whether the input alphabet is a vowel or not:");
+        Console.WriteLine("\n\n");
+
+        Console.Write("Input an Alphabet (A-Z or a-z) : ");
+        ch = Convert.ToChar(Console.ReadLine().ToLower());
+        int i = ch;
+        if (i >= 48 && i <= 57)
         {
-            // declare variable
-            int n;
-
-            //take input
-            Console.Write("Enter the number = ");
-            n = Convert.ToInt32(Console.ReadLine());
-
-            //check if n is even or odd
-            if (n % 2 == 0)
-                Console.WriteLine(n + " is even");
-            else
-                Console.WriteLine(n + " is odd");
-
-           
-            Console.ReadKey();
+            Console.Write("You entered a number, Please enter an alpahbet.");
         }
+        else
+        {
+            switch (ch)
+            {
+                case 'a':
+                    Console.WriteLine("The Alphabet is vowel");
+                    break;
+                case 'i':
+                    Console.WriteLine("The Alphabet is vowel");
+                    break;
+                case 'o':
+                    Console.WriteLine("The Alphabet is vowel");
+                    break;
+                case 'u':
+                    Console.WriteLine("The Alphabet is vowel");
+                    break;
+                case 'e':
+                    Console.WriteLine("The Alphabet is vowel");
+                    break;
+                default:
+                    Console.WriteLine("The Alphabet is not a vowel");
+                    break;
+            }
+        }
+        Console.ReadKey();
     }
 }
-
-
-
-
-
-
-
-
