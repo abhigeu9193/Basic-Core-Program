@@ -1,46 +1,42 @@
 ﻿// See https://aka.ms/new-console-template for more information
 //Console.WriteLine("Hello, World!");
-
-class constvowels
+class Maximam
 {
     static void Main(string[] args)
     {
-        char ch;
-        Console.WriteLine("");
-        Console.Write("check whether the input alphabet is a vowel or not:");
-        Console.WriteLine("\n\n");
+        int first, second, third;
+        Console.WriteLine("Enter the first number : ");
+        first = int.Parse(Console.ReadLine());
 
-        Console.Write("Input an Alphabet (A-Z or a-z) : ");
-        ch = Convert.ToChar(Console.ReadLine().ToLower());
-        int i = ch;
-        if (i >= 48 && i <= 57)
+        Console.WriteLine("Enter the second number : ");
+        second = int.Parse(Console.ReadLine());
+
+        Console.WriteLine("Enter the third number : ");
+        third = int.Parse(Console.ReadLine());
+
+        
+        if (first > second)
         {
-            Console.Write("You entered a number, Please enter an alpahbet.");
+            
+            if (first > third)
+            {
+                Console.WriteLine("largest number : " + first);
+            }
+            else
+            {
+                Console.WriteLine("largest number : " + third);
+            }
         }
         else
         {
-            switch (ch)
+            if (second > third)
             {
-                case 'a':
-                    Console.WriteLine("The Alphabet is vowel");
-                    break;
-                case 'i':
-                    Console.WriteLine("The Alphabet is vowel");
-                    break;
-                case 'o':
-                    Console.WriteLine("The Alphabet is vowel");
-                    break;
-                case 'u':
-                    Console.WriteLine("The Alphabet is vowel");
-                    break;
-                case 'e':
-                    Console.WriteLine("The Alphabet is vowel");
-                    break;
-                default:
-                    Console.WriteLine("The Alphabet is not a vowel");
-                    break;
+                Console.WriteLine("largest number : " + second);
+            }
+            else
+            {
+                Console.WriteLine("largest number : " + third);
             }
         }
-        Console.ReadKey();
     }
 }
