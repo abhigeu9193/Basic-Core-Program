@@ -1,31 +1,42 @@
 ﻿// See https://aka.ms/new-console-template for more information
 //Console.WriteLine("Hello, World!");
-// C# code to find highest power
-// of 2 smaller than or equal to n.
 using System;
 
-class Power
+class FlipFlop
 {
-	public static int Powerof2(int n)
+
+	// Function to find count of head and tail
+	public static Tuple<int, int> count_ht(char s,
+										int N)
 	{
-		int res = 0;
-		for (int i = n; i >= 1; i--)
+
+		// Check if initially all thecoins are facing towards head
+		Tuple<int, int> p = Tuple.Create(0, 0);
+
+		if (s == 'H')
 		{
-			// If i is a power of 2
-			if ((i & (i - 1)) == 0)
-			{
-				res = i;
-				break;
-			}
+			p = Tuple.Create((int)Math.Floor(N / 2.0),
+							(int)Math.Ceiling(N / 2.0));
 		}
-		return res;
+
+		// Check if initially all the coinsare facing towards tail
+		else if (s == 'T')
+		{
+			p = Tuple.Create((int)Math.Ceiling(N / 2.0),
+							(int)Math.Floor(N / 2.0));
+		}
+		return p;
 	}
 
 	// Driver Code
-	static public void Main()
+	static void Main()
 	{
-		int n = 8;
-		Console.WriteLine(Powerof2(n));
+		char C = 'H';
+		int N = 3;
+		Tuple<int, int> p = count_ht(C, N);
+
+		Console.WriteLine("Head = " + p.Item1);
+		Console.WriteLine("Tail = " + p.Item2);
 	}
 }
 
