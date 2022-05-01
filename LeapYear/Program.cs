@@ -1,8 +1,5 @@
 ﻿// See https://aka.ms/new-console-template for more information
 //Console.WriteLine("Hello, World!");
-
-// C# program to check
-// for a leap year
 using System;
 
 class LeapYear
